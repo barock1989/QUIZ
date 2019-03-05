@@ -1,5 +1,5 @@
 body {
-    background: url(back3.jpg) no-repeat center center fixed;
+    background: url(back1.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -10,16 +10,21 @@ body {
 
 .question {
     font-weight: 500;
+    color: red;
+    padding-bottom: 20px;
 
 }
 
 .answers {
     margin-bottom: 20px;
+    color: red;
+
 }
 
-#butt {
+#submit {
     font-size: 30px;
-    background-color: rgb(179, 36, 36);
+    align-items: inherit;
+    background-color: black;
     color: #fff;
     border: 0px;
     border-radius: 3px;

@@ -8,7 +8,6 @@
 
             const answers = [];
 
-
             for (letter in currentQuestion.answers) {
 
                 answers.push(
@@ -20,13 +19,11 @@
                 );
             }
 
-
             output.push(
                 `<div class="question"> ${currentQuestion.question} </div>
           <div class="answers"> ${answers.join("")} </div>`
             );
         });
-
 
         quizContainer.innerHTML = output.join("");
     }
@@ -47,27 +44,23 @@
 
 
             if (userAnswer === currentQuestion.correctAnswer) {
-
                 numCorrect++;
 
 
-                answerContainers[questionNumber].style.color = "yellow";
+                answerContainers[questionNumber].style.color = "blue";
             } else {
 
-
-                answerContainers[questionNumber].style.color = "red";
+                answerContainers[questionNumber].style.color = "blink";
             }
-        });
-
-
+        })
         resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
-
     }
 
     const quizContainer = document.getElementById("quiz");
     const resultsContainer = document.getElementById("results");
     const submitButton = document.getElementById("submit");
     const myQuestions = [{
+
             question: "1. Which of the following is a non-renewable resource?",
             answers: {
                 a: "Coal",
@@ -166,7 +159,7 @@
                 c: "Nuclear cell",
                 d: "Chromium cell"
             },
-            answer: "b"
+            correctAnswer: "b"
         },
         {
             question: "11. Both power and manure is provided by:",
@@ -272,10 +265,7 @@
 
     ];
 
-
     buildQuiz();
 
-
     submitButton.addEventListener("click", showResults);
-
 })();
